@@ -1,12 +1,15 @@
+import Form from "./Form"
+import Card from "./Card"
 
 function App() {
- 
+
 
   return (
     <div className="container">
-      <h1>Olá mundo</h1>
+      <Card/>
     </div>
   )
 }
+
 
 export default App
