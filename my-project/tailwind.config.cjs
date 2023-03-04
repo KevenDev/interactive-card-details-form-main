@@ -5,7 +5,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'spacegrotesk':['Space Grotesk', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
