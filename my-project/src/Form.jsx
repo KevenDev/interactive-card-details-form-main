@@ -62,7 +62,7 @@ const validarCartoes = () =>{
 
   return(
       <form onSubmit={handleSubmit} className="  block py-0 px-4 mt-[6rem] h-full w-screen font-spacegrotesk tracking-widest text-[#21092f] font-bold">
-      <div className="md:max-w-md md:w-8/12 md:justify-center md:mx-auto"> 
+      <div className="lg:w-6/12 lg:max-w-lg md:max-w-md md:w-8/12 md:justify-center md:mx-auto"> 
         <div className="flex flex-col w-full ">
             <label className="text-xs">CARDHOLDER NAME
               <input onChange={handleName} ref={nameRef} name="name" className="p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="text" placeholder="e.g. Jane Apples"/>
