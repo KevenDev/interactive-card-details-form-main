@@ -11,8 +11,11 @@ function App() {
   
   return (
     <>
+    <div className="md:flex md:justify-center md:items-center">      
       <Card name={firstName} card={card} cvc={cvc} month={month} year={year} />
       <Form setName={setFirstName} setCard={setCard} setCvc={setCvc} setMonth={setMonth} setYear={setYear} />
+    </div>
+
     </>
   )
 }
