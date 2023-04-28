@@ -61,8 +61,9 @@ const validarCartoes = () =>{
 }
 
   return(
-      <form onSubmit={handleSubmit} className="block py-0 px-4 mt-[6rem] h-full w-screen font-spacegrotesk tracking-widest text-[#21092f] font-bold">
-        <div className="flex flex-col w-full">
+      <form onSubmit={handleSubmit} className="  block py-0 px-4 mt-[6rem] h-full w-screen font-spacegrotesk tracking-widest text-[#21092f] font-bold">
+      <div className="md:max-w-md md:w-8/12 md:justify-center md:mx-auto"> 
+        <div className="flex flex-col w-full ">
             <label className="text-xs">CARDHOLDER NAME
               <input onChange={handleName} ref={nameRef} name="name" className="p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="text" placeholder="e.g. Jane Apples"/>
             </label>
@@ -74,22 +75,23 @@ const validarCartoes = () =>{
             </label>
           </div>
 
-          <div className="flex w-full justify-center items-center  mt-4">
+          <div className="flex w-full items-center  mt-4">
             <label className="text-xs"> EXP. DATE (MM/YY)
-              <div className="flex gap-2 w-1/2">
+              <div className="flex gap-2 w-full">
                 <input onChange={handleMonth} className="w-full mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="MM"/> 
                 <input onChange={handleYear} className="w-full mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="YY" /> 
               </div>
             </label>
-            <div className="flex">
+            <div className="flex w-full justify-end">
               <label className="font-spacegrotesk text-xs ml-2">CVC
-                <input onChange={handleCvc} className="p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="e.g. 123"/>
+                <input onChange={handleCvc} className=" p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="e.g. 123"/>
               </label>
               </div>
             </div>
-            <div className="btn text-center mt-4 h-19 p-2 rounded-md bg-[#21092f] text-[#ffffff]">
+            <div className=" btn text-center mt-4 h-19 p-2 rounded-md bg-[#21092f] text-[#ffffff]">
                 <button type="submit">Confirm</button>
             </div>
+        </div>
       </form>
   )
 }
