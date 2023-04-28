@@ -1,9 +1,8 @@
 import { useRef } from "react";
 
-const Form = ({setName, setCard}) => {
+const Form = ({setName, setCard, setCvc, setMonth, setYear}) => {
   const nameRef = useRef('');
   const cardRef = useRef('');
-
 
 const handleName = (e) => {
   setName(e.target.value);
@@ -12,6 +11,19 @@ const handleName = (e) => {
 const handleCard = (e) => {
   setCard(e.target.value);
 }
+
+const handleCvc = (e) => {
+  setCvc(e.target.value);
+}
+
+const handleMonth = (e) => {
+  setMonth(e.target.value);
+}
+
+const handleYear = (e) => {
+  setYear(e.target.value);
+}
+
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,13 +77,13 @@ const validarCartoes = () =>{
           <div className="flex w-full justify-center items-center  mt-4">
             <label className="text-xs"> EXP. DATE (MM/YY)
               <div className="flex gap-2 w-1/2">
-                <input className="w-10/12 mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="MM"/> 
-                <input className="w-10/12 mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="YY" /> 
+                <input onChange={handleMonth} className="w-full mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="MM"/> 
+                <input onChange={handleYear} className="w-full mt-1 p-2 border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="YY" /> 
               </div>
             </label>
             <div className="flex">
               <label className="font-spacegrotesk text-xs ml-2">CVC
-                <input className="p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="e.g. 123"/>
+                <input onChange={handleCvc} className="p-2 mt-1 w-full border-2 border-hsl(270, 3%, 87%) rounded-lg" type="number" placeholder="e.g. 123"/>
               </label>
               </div>
             </div>
