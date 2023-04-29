@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import {InputMask} from "react-input-mask"
+
 
 const Form = ({setName, setCard, setCvc, setMonth, setYear}) => {
   const nameRef = useRef('');
