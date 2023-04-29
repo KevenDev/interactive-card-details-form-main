@@ -89,7 +89,7 @@ const validarCartoes = () =>{
               </div>
             </div>
             <div className=" btn text-center mt-4 h-19 p-2 rounded-md bg-[#21092f] text-[#ffffff]">
-                <button type="submit">Confirm</button>
+                <button type="submit" className="w-full">Confirm</button>
             </div>
         </div>
       </form>
