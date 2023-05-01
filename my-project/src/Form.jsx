@@ -40,27 +40,6 @@ const verificarCampos = () => {
   }
 }
 
-const validarCartoes = () =>{
-  const cartao = cardRef.current.value;
-  const cartaoValido = cartao.match(/^[0-9]{16}$/);
-  const visa = cartao.match(/^4[0-9]{12}(?:[0-9]{3})?$/);
-  const mastercard = cartao.match(/^5[1-5][0-9]{14}$/)
-  if(cartaoValido){
-    console.log('cartão válido', cartao)
-  } else {
-    alert('Cartão inválido')
-  }
-  if(visa){
-    console.log('visa')
-  } else {
-    console.log('não é visa')
-  }
-  if(mastercard){
-    console.log('mastercard')
-  } else {
-    console.log('não é mastercard')
-  }
-}
 
   return(
       <form onSubmit={handleSubmit} className="  block py-0 px-4 mt-[6rem] h-full w-screen font-spacegrotesk tracking-widest text-[#21092f] font-bold">
